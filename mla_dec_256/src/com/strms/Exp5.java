@@ -1,0 +1,23 @@
+package com.strms;
+
+import java.util.stream.Stream;
+
+public class Exp5 {
+
+	public static void main(String[] args) {
+		Stream<Number> strm = Stream.of(10,20,30,40);
+		
+		Stream<String> names = Stream.of("sky", "rohit", "dravid" , "kohli");
+		
+		Stream.of(2,4,5,6,7).findAny().ifPresent(System.out::println);
+		
+		Stream.of("sky", "rohit", "dravid" , "kohli").findFirst().ifPresent(System.out::println);
+		
+//		names.parallel().sorted().forEach(System.out::println);
+//		names.close();
+		
+		names.sorted().forEach(System.out::println);
+
+	}
+
+}
