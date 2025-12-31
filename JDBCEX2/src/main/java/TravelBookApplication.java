@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 
 import java.sql.ResultSet;
  
-public class BankApplication {
+public class TravelBookApplication {
  
 	public static void main(String[] args) throws Exception {
 
