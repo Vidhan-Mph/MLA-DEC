@@ -1,6 +1,6 @@
 package com.test;
 
-import org.hibernate.mapping.List;
+import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -11,14 +11,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
 @Entity
 @Table(name="student")
 public class Student {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)	
-private int id;
-public int getId() {
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	
+	private String std_name;
+	
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name="std_id")
+	private List<Address> addresses;
+
+	public int getId() {
 		return id;
 	}
 
@@ -34,16 +42,13 @@ public int getId() {
 		this.std_name = std_name;
 	}
 
-	public java.util.List<Address> getAddresses() {
+	public List<Address> getAddresses() {
 		return addresses;
 	}
 
-	public void setAddresses(java.util.List<Address> addresses) {
+	public void setAddresses(List<Address> addresses) {
 		this.addresses = addresses;
 	}
-
-private String std_name;
-@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
-@JoinColumn(name="std_id")
-private java.util.List<Address> addresses;
+	
+	
 }
