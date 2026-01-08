@@ -50,7 +50,7 @@ public class StoreData {
 				
 				
 				
-				.
+				
 				dt.setEmp_cmp("Microsoft");
 				dt.setEmp_name("ishita");
 				dt.setEmp_salary(2000000);

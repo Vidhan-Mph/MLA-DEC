@@ -26,6 +26,8 @@ public class Player {
 		this.name = name;
 	}
 	@Id
+	
+	
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String name;
