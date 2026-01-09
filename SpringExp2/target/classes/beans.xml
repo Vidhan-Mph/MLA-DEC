@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+	
+	<bean id = "std" class="com.test.Student" scope="singleton" >
+		
+		<property name = "id" value = "101" ></property>
+		<property name = "name" value = "Vidhan"></property>
+		<property name = "age" value="22"></property>
+		<property name = "percentage" value="100"></property>
+	</bean>
+	
+		<bean id = "std1" class="com.test.Student" scope="singleton" >
+		
+		<constructor-arg name = "id" value = "102" ></constructor-arg>
+		<constructor-arg name = "name" value = "Ishita"></constructor-arg>
+		<constructor-arg name = "age" value="22"></constructor-arg>
+		<constructor-arg name = "percentage" value="100"></constructor-arg>
+	</bean>
+
+ 
+</beans>
+ 
+ 
