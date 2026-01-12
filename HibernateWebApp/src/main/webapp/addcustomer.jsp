@@ -1,5 +1,5 @@
-<%@page import="com.test.CustomerDAO"%>
-<%@page import="com.test.Customer"%>
+<%@page import="com.test.dao.CustomerDAO"%>
+<%@page import="com.test.dao.Customer"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,13 +10,7 @@
 </head>
 <body>
 
-	<!--  
-	<jsp:useBean id="cst" class="com.test.Customer"></jsp:useBean>
-	
-	<jsp:setProperty property="firstName" name="cst"/>
-	<jsp:setProperty property="lastName" name="cst"/>
-	<jsp:setProperty property="location" name="cst"/>
-	-->
+	com.test.spring.model.Customer cst = new com.test.spring.model.Customer();
 	
 	<%
 		String fname= request.getParameter("firstName");

@@ -1,4 +1,4 @@
-<%@page import="com.test.Customer"%>
+<%@page import="com.test.dao.Customer"%>
 <%@page import="org.hibernate.internal.build.AllowSysOut"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
