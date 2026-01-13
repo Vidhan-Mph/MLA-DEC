@@ -6,6 +6,8 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.test.model.Customer;
 import com.test.model.CustomerMapper;
@@ -13,6 +15,7 @@ import com.test.model.CustomerMapper;
 
 
 @Component
+@Transactional(propagation=Propagation.REQUIRED)//to handle transaction when exception occur
 public class CustomerDao {
 	private JdbcTemplate jdbcTemplate;
 
