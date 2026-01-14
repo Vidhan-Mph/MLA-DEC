@@ -31,4 +31,4 @@ public String greetUser1(@RequestParam("name") String name, Model model)
 {   model.addAttribute("info",name);
 	return "greet";
 }
-}
+} 
