@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h2>Dashboard</h2>
+
+<a th:href="@{/admin}" sec:authorize="hasRole('ADMIN')">Admin</a>
+<a th:href="@{/manager}" sec:authorize="hasAnyRole('MANAGER','ADMIN')">Manager</a>
+<a th:href="@{/user}" sec:authorize="hasAnyRole('USER','MANAGER','ADMIN')">User</a>
+
+<br><br>
+<a th:href="@{/logout}">Logout</a>
+
+</body>
+</html>

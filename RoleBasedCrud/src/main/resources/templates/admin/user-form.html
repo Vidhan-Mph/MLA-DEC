@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Form</title>
+</head>
+<body>
+
+<h2>User Form</h2>
+
+<form th:action="@{/admin/users/save}" th:object="${userDto}" method="post">
+
+    <input type="hidden" th:field="*{id}"/>
+
+    Username:
+    <input type="text" th:field="*{username}"/><br><br>
+
+    Password:
+    <input type="password" th:field="*{password}"/><br><br>
+
+    Enabled:
+    <input type="checkbox" th:field="*{enabled}"/><br><br>
+
+    Roles:<br>
+    <div th:each="role : ${roles}">
+        <input type="checkbox"
+               th:value="${role.id}"
+               th:field="*{roleIds}"/>
+        <span th:text="${role.name}"></span><br>
+    </div>
+
+    <br>
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: =SpringBootCloudGatewayAPI
+server:
+  port: 1111

@@ -42,5 +42,15 @@ public class StudentDAOImpl implements StudentDAO {
 	public List<Student> getAllStudents() {
 		return repo.findAll();
 	}
+	@Override
+	public Optional<Student> getStudentByName(String name) {
+		return repo.getStudentByName(name);
+	}
+ 
+	@Override
+	public List<Student> getStudentByDepartment(String department) {
+		return repo.getStudentByDepartment(department);
+	}
+ 
 
 }

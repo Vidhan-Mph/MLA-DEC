@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: SpringBootCloudService
+server:
+  port: 7373
